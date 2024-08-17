@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5500; // Original port number
+const port = 3306; // Original port number
 
 // Import routes
 const userRoute = require("./routes/userRoute");
