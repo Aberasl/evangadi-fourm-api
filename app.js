@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 5500; // Default to 5500 or use PORT from .env
+const port = process.env.DB_PORT || 5500; // Default to 5500 or use PORT from .env
 
 // Import routes
 const userRoute = require("./routes/userRoute");
