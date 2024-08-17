@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 5500; 
+const port = process.env.DB_PORT || 5500; 
 
 // Import routes
 const userRoute = require("./routes/userRoute");
@@ -24,7 +24,7 @@ async function start() {
     await dbConnection.execute("SELECT 'test'");
     console.log("Database connection established");
     app.listen(port, () => {
-      console.log(`Server is running on port ${port}`);
+      console.log(`Server is running on port ${process.env.DB_PORT}`);
     });
   } catch (error) {
     console.error("Error starting server:", error.message);
